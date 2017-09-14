@@ -1,0 +1,19 @@
+{
+  "name": "f",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.4",
+    "font-awesome": "^4.7.0",
+    "handlebars": "^4.0.10",
+    "jquery": "^3.2.1"
+  }
+}

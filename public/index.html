@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" id="clear-empty-btn">Clear</button>
+                <h1>Weather Chat</h1>
+                <form action="get">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="search-input" placeholder="Enter city or zip">
+                        <button type="button" class="btn btn-primary" id="gettemp-button">Get Temp</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="results">
+
+        </div>
+    </div>
+
+    <script id="posts-template" type="text/x-handlebars-template">
+        <div class="row post">
+            <div class="col-md-12">
+                <div class="content">
+                    <h4 class="city-name">{{cityName}}</h4>
+                    <p class="weather info">{{temp.celsius}}&#8451 / {{temp.fahrenheit}}&#8457 at {{currentTime}} on {{currentDate}}</p>
+                    <div class="post-comments"></div>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control comment-input" placeholder="Comment about the weather in {{cityName}}">
+                            <button type="button" class="btn btn-success post-comment-btn">Comment</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/javascript" src="jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="handlebars/dist/handlebars.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApADeYn3ccku3pD0XfU5ORfcGKFL9Wu0Y&libraries=places"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
